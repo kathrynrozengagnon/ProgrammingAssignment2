@@ -13,6 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
   	m<<-NULL
 }
 get<-function() x  #2. get the value of the matrix
+setmatrix<-function(solve) m<<- solve # 3. get the value of the inverse 	using solve function
 getmatrix<-function() m #4.  get the value of the inverse
 list(set=set, get=get,
    setmatrix=setmatrix,
@@ -31,6 +32,5 @@ cacheSolve <- function(x=matrix(), ...) {
 	x$setmatrix(m)
     m # print the calculated inverse
 }
-
 
 
